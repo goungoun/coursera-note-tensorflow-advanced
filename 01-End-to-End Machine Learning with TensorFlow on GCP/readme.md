@@ -13,19 +13,22 @@
 - `managed service` for training and deploying Tensorflow models
 - Hyper parameter tuning: number of node, stride size, number of bucket
 - API 서빙: autoscale prediction code
+### Toy project vs managed service
 > toy project와 상용 ML 서비스의 아키텍처를 비교해보자
+- toy project
 ![toy_ml_problem.png](toy_ml_problem.png)
+- managed service
 ![cloud_ml.png](cloud_ml.png)
 
 ## Explore the dataset
 - The most common ML models at Google are models that operate on structured data
 > 가장 많이 사용하는 network 모델은 LSTM도 CNN도 아닌 4~5 layer 정도를 구성된 MLP(Multilayer perceptron)임! 
-![google_model_stats.png](google_model_stats.pngs)
+![google_model_stats.png](google_model_stats.png)
 
 ## Lab: Exploring natality dataset
 - 목적: 출생 전 아기의 몸무게를 예측해서 (regression problem) `스페셜 케어`가 필요한 아기를 조기 발견해서 아기의 사망율을 낮추는 것
-> 실질적인 목적은 간호사가 사용할 ML 어플리케이션에 ML 예측 모델을 적용하여 서비스 하는 것 <br>
-![baby_weight predictor.png](baby_weight predictor.png)
+> 간호사가 사용할 ML 어플리케이션에 ML 예측 모델을 적용하여 서비스 한다면 아래와 같은 그림일 것이다 <br>
+![baby_weight_predictor.png](baby_weight_predictor.png)
 > 원본: https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/courses/machine_learning/deepdive/06_structured/labs/1_explore.ipynb
 ~~~python
 from google.cloud import bigquery
